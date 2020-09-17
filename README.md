@@ -20,17 +20,17 @@ Besides standard graph representation, data are also drawn on the map. Besides t
 1. Apply the Transformation “Labels to fields” to TimeSeries output result
 2. Change the map parameter “Location Data” to table mode and map the relevant fields accornidngly, including the `geohash` field 
 
-![](images/coronavirus_map.png)
+![](images/coronavirus_map.gif)
 
 
-### The Docker container runs the following applications:
+## The Docker container runs the following applications:
 
 * coronavirusapi_exporter.py - app to get timeseries from weather metrics from http://coronavirusapi.com/
 * Redis database with RedisTimeSeries module - to store the timeseries. We also use Redis Set to keep the list of states to use them in Grafana dashborad variable
 * Grafana with Redis Data Source - to display the data
 
 
-## Run using `docker-compose`
+### Run using `docker-compose`
 
 The project provides `docker-compose.yml` to start Redis with RedisTimeSeries module, Grafana 7.0 and data exporter.
 
